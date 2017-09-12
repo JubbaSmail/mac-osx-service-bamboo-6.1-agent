@@ -13,17 +13,15 @@
 	<key>Droppable</key>
 	<false/>
 	<key>InterfaceType</key>
-	<string>Text Window</string>
+	<string>None</string>
 	<key>InterpreterArgs</key>
-	<array>
-		<string>/bin/sh</string>
-	</array>
+	<array/>
 	<key>InterpreterPath</key>
-	<string>/bin/bash</string>
+	<string>/bin/sh</string>
 	<key>PromptForFileOnLaunch</key>
 	<false/>
 	<key>RemainRunning</key>
-	<true/>
+	<false/>
 	<key>ScriptArgs</key>
 	<array/>
 	<key>Suffixes</key>
