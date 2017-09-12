@@ -1,7 +1,7 @@
 # mac-osx-service-bamboo-6.1-agent
 Run Bamboo 6.1 Agent on Mac OS X as a background service to build iOS IPA and Android APK
 
-<img width="250" src="https://www.apple.com/hk/en/macos/images/og.jpg?201705142356"/><img width="250" src="https://wac-cdn.atlassian.com/dam/jcr:4f99ae3f-808f-44f1-9647-2b7cb87bb0e6/bamboo_rgb_slate.png?cdnVersion=fr"/><img width="250" src="https://docs.particle.io/assets/images/apple-android.png"/>
+<img width="250" src="https://www.apple.com/hk/en/macos/images/og.jpg?201705142356"/><img width="300" src="https://wac-cdn.atlassian.com/dam/jcr:4f99ae3f-808f-44f1-9647-2b7cb87bb0e6/bamboo_rgb_slate.png?cdnVersion=fr"/><img width="250" src="https://docs.particle.io/assets/images/apple-android.png"/>
 
 # Installing
 Clone the project to your directory
