@@ -1,0 +1,37 @@
+#! /bin/bash
+bamboo=$(ps -ef | grep atlassian-bamboo-agent-installer | grep -v grep | wc -l | tr -s ' ')
+if [[ $bamboo != " 0" ]] ; then
+    echo "Agent Already running"
+    exit 0
+fi
+cd "$(dirname "$0")/../Resources/"
+
+if [[ ! -f /Library/LaunchAgents/bamboo.agent.plist ]] ; then
+    osascript -e "do shell script \"./setup.sh\" with administrator privileges"
+    mkdir -p ~/bamboo-agent-home/bin
+    cp bamboo-capabilities.properties ~/bamboo-agent-home/bin/
+    mkdir -p ~/.gradle/
+    cp grade.properties ~/.gradle/
+else
+    current_dir=$(pwd)
+    if [[ $current_dir == "/Applications/BambooAgent.app/Contents/Resources" ]] ; then
+        java -version
+        if [[ $? -ne 0 ]] ; then
+            osascript -e 'tell app "System Events" to display dialog "Error: Can not find Java 8, please install Java 8 first!"'
+            exit 1
+        fi
+
+        if [[ -f BambooAgent.conf ]] ; then
+            source BambooAgent.conf
+            if [[ -f atlassian-bamboo-agent-installer-6.1.0.jar ]] ; then
+                java -jar atlassian-bamboo-agent-installer-6.1.0.jar $bamboo_url -t $bamboo_token > ~/bamboo-agent-home/BambooAgent.log
+            else
+                osascript -e 'tell app "System Events" to display dialog "Error: Can not find Bamboo Agent Jar file!"'
+            fi
+        else 
+            osascript -e 'tell app "System Events" to display dialog "Error: Can not find the configuration file!"'
+        fi
+    else
+        osascript -e 'tell app "System Events" to display dialog "Error: please run the application from the App Center!"'
+    fi
+fi
