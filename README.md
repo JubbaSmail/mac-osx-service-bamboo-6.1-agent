@@ -8,7 +8,9 @@ BambooAgent.conf
 # Installing
 Clone the project to your directory
 ```bash
-git clone https://github.com/Ismail-AlJubbah/mac-osx-service-bamboo-6.1-agent.git
+brew install git-lfs
+git lfs install
+git lfs clone https://github.com/Ismail-AlJubbah/mac-osx-service-bamboo-6.1-agent.git
 ```
 # Running
 
