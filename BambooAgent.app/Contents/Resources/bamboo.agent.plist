@@ -7,7 +7,7 @@
 	<key>ProgramArguments</key>
 	<array>
 		<string>/bin/bash</string>
-		<string>/Applications/BambooAgent.app/Contents/Resources/script</string>
+		<string>/Users/WHOAMI/Applications/BambooAgent.app/Contents/Resources/script</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>

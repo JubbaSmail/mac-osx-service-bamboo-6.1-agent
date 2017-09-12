@@ -5,16 +5,23 @@ if [[ $bamboo != " 0" ]] ; then
     exit 0
 fi
 cd "$(dirname "$0")/../Resources/"
+mkdir -p ~/Library/LaunchAgents/
+mkdir -p ~/Applications/
 
-if [[ ! -f /Library/LaunchAgents/bamboo.agent.plist ]] ; then
-    osascript -e "do shell script \"./setup.sh\" with administrator privileges"
+if [[ ! -f ~/Library/LaunchAgents/bamboo.agent.plist ]] ; then    
+    cp bamboo.agent.plist ~/Library/LaunchAgents/
+    current_user=$(whoami)
+    sed -i -- "s/WHOAMI/$current_user/g" ~/Library/LaunchAgents/bamboo.agent.plist
+    cp -r ../../../BambooAgent.app ~/Applications/
     mkdir -p ~/bamboo-agent-home/bin
     cp bamboo-capabilities.properties ~/bamboo-agent-home/bin/
     mkdir -p ~/.gradle/
     cp grade.properties ~/.gradle/
+    osascript -e 'tell app "System Events" to display dialog "BambooAgent.app: Installation Completed, please run the application from the App Center."'
 else
     current_dir=$(pwd)
-    if [[ $current_dir == "/Applications/BambooAgent.app/Contents/Resources" ]] ; then
+    home_dir=$(echo ~)
+    if [[ $current_dir == "$home_dir/Applications/BambooAgent.app/Contents/Resources" ]] ; then
         java -version
         if [[ $? -ne 0 ]] ; then
             osascript -e 'tell app "System Events" to display dialog "Error: Can not find Java 8, please install Java 8 first!"'
