@@ -14,6 +14,13 @@ Bamboo Agent require Java 8 or later, follow the steps:
     brew update
     brew cask install java
     ```
+3. Bamboo Agent will use the hostname as it's name to be displayed in Bamboo Server Agent Mangment insterface, to edit the hostname on you machine do the following:
+	- Apple -> System Prefrence -> Sharing -> Computer Name
+	- Set a uniqe name in your network, to make it easier to trak the agents later.
+
+4. If you need the agent to be always ready to build then you need to set you machine to never to sleep:
+	- Apple -> System Prefrence -> Energy Server -> Computer Sleep : Never
+	
 # Are your Bamboo Server ready to recive connections ?
 1. Go to your Bamboo server settings -> System -> General Configureation: 
    Make sure Broker client URL is not pointing to localhost, it shoud point to your server ip or hostname
@@ -50,14 +57,6 @@ On the Mac OSX which will host the agent, do the following:
    echo "export PATH=$ANDROID_HOME/platform-tools:$PATH" >> ~/.bash_profile
    echo "export PATH=$ANDROID_HOME/tools:$PATH" >> ~/.bash_profile 
    ```
-# Configure your Mac to host the Agent
-Bamboo Agent will use the hostname as it's name to be displayed in Bamboo Server Agent Mangment insterface, to edit the hostname on you machine do the following:
-1. Apple -> System Prefrence -> Sharing -> Computer Name
-2. Set a uniqe name in your network, to make it easier to trak the agents later.
-
-If you need the agent to be always ready to build then you need to set you machine to never to sleep:
-1. Apple -> System Prefrence -> Energy Server -> Computer Sleep : Never
-
 # Install BambooAgent
 Using Finder, go the repo folder, double click on BambooAgent, this will copy the App to your Application folder and set it to run automatically on login
 
