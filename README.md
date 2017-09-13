@@ -33,6 +33,14 @@ Bamboo Agent require Java 8 or later, follow the steps:
 3. If you would like to forse agent to use authentication token: 
 	Go to your Bamboo server settings -> Agents, click on Enable Authentication Token, then click on Install Remote Agent, copy the token after -t from the command
 
+# Download the Mac App
+The app size on Github is larger than 100 MB, you need to use git lfs to clone it to your machine:
+```bash
+brew install git-lfs
+git lfs install
+git lfs clone https://github.com/Ismail-AlJubbah/mac-osx-service-bamboo-6.1-agent.git
+```
+
 # Configure the Agent to connect to Bamboo Server
 The App contains a configuration file to save Bamboo Server URL and tocken
 ```bash
