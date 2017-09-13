@@ -76,10 +76,10 @@ Using Finder, go the repo folder, double click on BambooAgent, this will copy th
 
 # Configure Build Plan for Android APK:
 1. Go to Configure Plan in your plan settings, in Task, click Add task, select Command, and enter the following values:
-        a. Task description: Build APK
-        b. Executable: gradelw
-	c. Argument to build a relase APK: clean assembleRelease
-	d. Environment variables: ANDROID_HOME="/usr/local/share/android-sdk"
+	- Task description: Build APK
+	- Executable: gradelw
+	- Argument to build a relase APK: clean assembleRelease
+	- Environment variables: ANDROID_HOME="/usr/local/share/android-sdk"
 
 # Debuging
 Run the following commmand to check the agent logs:
