@@ -65,7 +65,7 @@ On the Mac OSX which will host the agent, do the following:
    echo "export PATH=$ANDROID_HOME/platform-tools:$PATH" >> ~/.bash_profile
    echo "export PATH=$ANDROID_HOME/tools:$PATH" >> ~/.bash_profile 
    ```
-# Install BambooAgent
+# Install BambooAgent.app
 Using Finder, go the repo folder, double click on BambooAgent, this will copy the App to your Application folder and set it to run automatically on login
 
 # Running
