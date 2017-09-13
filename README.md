@@ -80,6 +80,13 @@ Using Finder, go the repo folder, double click on BambooAgent, this will copy th
 	- Executable: gradelw
 	- Argument to build a relase APK: clean assembleRelease
 	- Environment variables: ANDROID_HOME="/usr/local/share/android-sdk"
+	
+# Configure Build Plan for iOS IPA:
+1. Go to Configure Plan in your plan settings, in Task, click Add task, select XCode, and enter the following values:
+	- Task description: Build IPA
+	- Apple SDK: iOS 10.3, run the command xcodebuild -showsdks to get the SDK name in your machine.
+	- Make sure to enter the values of: Workspace and Scheme.
+	- Check Build an .ipa for iOS Application Distribution, and fill the values: iOS application path, Development Team and Distribution Method: Application Store.
 
 # Debuging
 Run the following commmand to check the agent logs:
