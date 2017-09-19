@@ -55,7 +55,7 @@ now edit the value of the variables bamboo_url and bamboo_token to work with you
 
 # To Build iOS App
 On the Mac OSX which will host the agent, do the following:
-1. Install Xcode from App Store
+1. Install or Update Xcode from App Store or from Apple Developer Page [here](https://developer.apple.com/downloads/)
 2. For each new build plan, install Apple development and release private keys on the Keychain manaully.
 3. For each new build plan, copy *.mobileprovision to "~/Library/MobileDevice/Provisioning\ Profiles/", if you keep the provisioning profiles in your GIT repo then you can do this step automatically by adding Command Task in the build plan in Bamboo Server.
 
