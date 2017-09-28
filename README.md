@@ -12,7 +12,8 @@ Bamboo Agent require Java 8 or later, follow the steps:
 2. Install Java 8:
    ```bash
     brew update
-    brew cask install java
+    brew tap caskroom/versions
+    brew cask install java8
     ```
 3. Bamboo Agent will use the hostname as it's name to be displayed in Bamboo Server Agent Mangment insterface, to edit the hostname on you machine do the following:
 	- Apple -> System Prefrence -> Sharing -> Computer Name
