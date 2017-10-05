@@ -20,7 +20,7 @@ Bamboo Agent require Java 8 or later, follow the steps:
 	- Set a uniqe name in your network, to make it easier to trak the agents later.
 	- Then execute the folllowing commands to edit the hostname:
 	```bash
-	scutil –-set HostName new_hostname
+	scutil --set HostName new_hostname
 	```
 
 4. If you need the agent to be always ready to build then you need to set you machine to never to sleep:
